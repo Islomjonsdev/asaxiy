@@ -4,11 +4,11 @@ import React from "react";
 
 const RootLayout = ({ children }) => {
   return (
-    <div>
+    <>
       <Header />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 
