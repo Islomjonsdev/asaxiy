@@ -10,7 +10,7 @@ const Bestsellers = () => {
     <section className="mb-[96px]">
       <div className="max-w-[1336px] w-full sm:flex-wrap ml-auto mr-auto pl-[20px] pr-[20px]">
         <Text title="Bestsellers" />
-        <ul className="flex items-center justify-between">
+        <ul className="flex justify-between">
           {bestSellersData?.map((item) => {
             const { id, bestImage, bestText, bestPrice, bestMonth, stars } =
               item;
