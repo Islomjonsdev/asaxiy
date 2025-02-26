@@ -43,28 +43,28 @@ const MainHeader = () => {
       <div className=" flex item-center gap-[24px]">
         <Link
           className="flex flex-col items-center font-normal text-[15px] leading-[20px] text-[#5C596D]"
-          href={"/"}
+          href={"/basket"}
         >
           <Image src={cartIcon} width={20} height={20} alt="cartIcon" />
           Basket
         </Link>
         <Link
           className="flex flex-col items-center font-normal text-[15px] leading-[20px] text-[#5C596D]"
-          href={"/"}
+          href={"/favorites"}
         >
           <Image src={likeIcon} width={20} height={20} alt="cartIcon" />
           Favorites
         </Link>
         <Link
           className="flex flex-col items-center font-normal text-[15px] leading-[20px] text-[#5C596D]"
-          href={"/"}
+          href={"/comparison"}
         >
           <Image src={compareIcon} width={20} height={20} alt="cartIcon" />
           Comparison
         </Link>
         <Link
           className="flex flex-col items-center font-normal text-[15px] leading-[20px] text-[#5C596D]"
-          href={"/"}
+          href={"/logout"}
         >
           <Image src={logoutIcon} width={20} height={20} alt="cartIcon" />
           To come in
