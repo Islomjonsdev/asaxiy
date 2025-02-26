@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   :root {
 
@@ -118,4 +116,42 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/fonts/poppins-v22-latin-regular.woff2') format('woff2'); 
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../public/fonts/poppins-v22-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../public/fonts/poppins-v22-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../public/fonts/poppins-v22-latin-700.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
 }
