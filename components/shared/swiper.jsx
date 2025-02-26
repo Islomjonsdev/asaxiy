@@ -2,7 +2,6 @@
 
 import { heroImg } from "@/api/data";
 import Image from "next/image";
-import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
