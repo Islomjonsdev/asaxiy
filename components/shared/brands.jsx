@@ -55,9 +55,7 @@ const Brands = () => {
             <button
               key={tabs}
               onClick={() => setTab(tabs)}
-              className={`px-[50px] py-[8px] border border-transparent bg-[#F6F6F6] text-[#5C596D] font-normal text-[15px] leading-[20px] rounded-[4px] ${
-                tab === tabs ? "text-[#1B5BF7] border border-[#B3C8FD]" : ""
-              }`}
+              className={`px-[50px] py-[8px] border border-transparent bg-[#F6F6F6] text-[#5C596D] font-normal text-[15px] leading-[20px] rounded-[4px] ${ tab === tabs ? "text-[#1B5BF7] border border-[#B3C8FD]" : ""}`}
             >
               {tabs}
             </button>

@@ -20,10 +20,10 @@ const Header = () => {
           </div>
 
           <div className="flex gap-[32px]">
-            {headerData?.map((item) => {
+            {headerData?.map((item, id) => {
               const { headerImage, headerText } = item;
               return (
-                <Link className="flex items-center gap-[4px] text-[#5C596D] font-normal text-[14px] leading-[18px]" href="/">
+                <Link className="flex items-center gap-[4px] text-[#5C596D] font-normal text-[14px] leading-[18px]" key={id} href="/">
                   <Image
                     src={headerImage}
                     width={20}
