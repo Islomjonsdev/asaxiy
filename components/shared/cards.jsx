@@ -40,6 +40,7 @@ const Cards = () => {
                 height={20}
                 alt="stars"
               />
+            </Link>
               <div className="flex items-center justify-between">
                 <Button variant="addToCartBtn">
                   <ShoppingCart />
@@ -53,7 +54,6 @@ const Cards = () => {
                   </Button>
                 </div>
               </div>
-            </Link>
           </li>
         );
       })}
