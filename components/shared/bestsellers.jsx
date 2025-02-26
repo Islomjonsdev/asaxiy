@@ -4,6 +4,7 @@ import Link from "next/link";
 import Text from "./text";
 import { Button } from "../ui/button";
 import { Heart, ShoppingCart } from "lucide-react";
+import compareIcon from "../../public/svg/comparison.svg"
 
 const Bestsellers = () => {
   return (
@@ -35,6 +36,7 @@ const Bestsellers = () => {
                     {bestMonth}
                   </p>
                   <Image className="mb-5" src={stars} width={20} height={20} alt="stars" />
+                </Link>
                   <div className="flex items-center justify-between">
                     <Button variant="addToCartBtn">
                       <ShoppingCart />
@@ -42,13 +44,14 @@ const Bestsellers = () => {
                     </Button>
 
                     <div className="flex items-center">
-                      <Button variant="ghost">like</Button>
+                      <Button variant="ghost">
+                        <Image src={compareIcon} width={20} height={20} alt="compareIcon"/>
+                      </Button>
                       <Button variant="ghost">
                         <Heart />
                       </Button>
                     </div>
                   </div>
-                </Link>
               </li>
             );
           })}

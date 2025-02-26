@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
+import comparewIcon from "../../public/svg/comparison.svg"
 
 const Cards = () => {
   return (
@@ -48,7 +49,9 @@ const Cards = () => {
                 </Button>
 
                 <div className="flex items-center">
-                  <Button variant="ghost">like</Button>
+                  <Button variant="ghost">
+                    <Image src={comparewIcon} width={20} height={20} alt="comparewIcon"/>
+                  </Button>
                   <Button variant="ghost">
                     <Heart />
                   </Button>

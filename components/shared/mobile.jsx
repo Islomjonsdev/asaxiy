@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import mobileLogo from "../../public/images/mobilelogo.png";
 import googlePlay from "../../public/svg/google-play.svg";
-// import appStore from "../../public/svg/appStore.svg";
+import appStore from "../../public/svg/appstore.svg";
 import Link from "next/link";
 import phoneImage from "../../public/images/phone.png"
 
@@ -37,8 +37,7 @@ const Mobile = () => {
                 />
               </Link>
               <Link href={"/"}>
-                {/* <Image src={appStore} width={168} height={49} alt="appstore" /> */}
-                Apple store
+                <Image src={appStore} width={168} height={49} alt="appstore" />
               </Link>
             </div>
           </div>
