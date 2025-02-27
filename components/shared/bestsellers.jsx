@@ -3,20 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import Text from "./text";
 import { Button } from "../ui/button";
-import { Heart, ShoppingCart } from "lucide-react";
-import compareIcon from "../../public/svg/comparison.svg"
+import { ArrowRightLeft, Heart, ShoppingCart } from "lucide-react";
+import compareIcon from "../../public/svg/comparison.svg";
 
 const Bestsellers = () => {
   return (
-    <section className="mb-[96px]">
-      <div className="max-w-[1336px] w-full sm:flex-wrap ml-auto mr-auto pl-[20px] pr-[20px]">
+    <section className="mb-24">
+      <div className="max-w-[1336px] w-full mx-auto px-5">
         <Text title="Bestsellers" />
-        <ul className="flex justify-between">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {bestSellersData?.map((item) => {
-            const { id, bestImage, bestText, bestPrice, bestMonth, stars } =
-              item;
+            const { id, bestImage, bestText, bestPrice, bestMonth, stars } = item;
             return (
-              <li className="max-w-[300px] w-full bg-white shadow p-6 rounded-[8px]" key={id}>
+              <li className="bg-white shadow-md p-6 rounded-lg" key={id}>
                 <Link href={"/"}>
                   <div className="flex items-center justify-center mb-3">
                     <Image
@@ -24,34 +23,34 @@ const Bestsellers = () => {
                       width={226}
                       height={170}
                       alt="bestImage"
+                      className="w-full h-auto object-cover rounded-md"
                     />
                   </div>
-                  <p className="text-[#5C596D] font-normal text-[16px] leading-[20px] mb-4">
+                  <p className="text-[#5C596D] text-base leading-5 mb-4">
                     {bestText}
                   </p>
-                  <span className="text[#1D1A2F] font-semibold text-[20px] leading-[24px]">
+                  <span className="text-[#1D1A2F] font-semibold text-lg">
                     {bestPrice}
                   </span>
-                  <p className="text-[#5C596D] font-normal text-[16px] leading-[20px] mt-2 mb-4">
+                  <p className="text-[#5C596D] text-sm mt-2 mb-4">
                     {bestMonth}
                   </p>
                   <Image className="mb-5" src={stars} width={20} height={20} alt="stars" />
                 </Link>
-                  <div className="flex items-center justify-between">
-                    <Button variant="addToCartBtn">
-                      <ShoppingCart />
-                      Add to cart
+                <div className="flex items-center justify-between">
+                  <Button variant="addToCartBtn" className="text-sm px-3 py-2">
+                    <ShoppingCart className="w-4 h-4" />
+                    Add to cart
+                  </Button>
+                  <div className="flex items-center gap-2">
+                    <Button variant="ghost">
+                    <ArrowRightLeft className="w-5 h-5" />
                     </Button>
-
-                    <div className="flex items-center">
-                      <Button variant="ghost">
-                        <Image src={compareIcon} width={20} height={20} alt="compareIcon"/>
-                      </Button>
-                      <Button variant="ghost">
-                        <Heart />
-                      </Button>
-                    </div>
+                    <Button variant="ghost">
+                      <Heart className="w-5 h-5" />
+                    </Button>
                   </div>
+                </div>
               </li>
             );
           })}

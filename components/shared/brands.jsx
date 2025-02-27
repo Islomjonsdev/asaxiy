@@ -50,7 +50,7 @@ const Brands = () => {
     <section className="mb-[64px]">
       <div className="max-w-[1336px] w-full sm:flex-wrap ml-auto mr-auto pl-[20px] pr-[20px]">
         <Text title="Популярные бренды" />
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center flex-wrap justify-between mb-6 lg: gap-4">
           {categories?.map((tabs) => (
             <button
               key={tabs}
